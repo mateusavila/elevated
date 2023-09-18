@@ -1,0 +1,36 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/vue": "^1.2.1",
+    "@types/gapi": "^0.0.42",
+    "@types/mixpanel-browser": "^2.38.0",
+    "@types/three": "^0.144.0",
+    "astro": "^1.6.12",
+    "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^1.0.2",
+    "@nanostores/vue": "^0.6.1",
+    "@vee-validate/rules": "^4.7.3",
+    "@vuepic/vue-datepicker": "^3.6.0",
+    "@vueuse/core": "^9.6.0",
+    "dayjs": "^1.11.6",
+    "googleapis": "^108.0.1",
+    "mixpanel-browser": "^2.45.0",
+    "nanostores": "^0.7.1",
+    "sass": "^1.56.1",
+    "three": "^0.144.0",
+    "vee-validate": "^4.7.3",
+    "vercel": "^28.7.2",
+    "yup": "^0.32.11"
+  }
+}

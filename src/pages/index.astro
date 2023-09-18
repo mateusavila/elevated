@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Slider from '../components/Slider.astro'
+import SocialLinks from '../components/SocialLinks.astro'
+import FakeTitle from '../components/FakeTitle.astro';
+---
+
+<Layout title="Elevated">
+	<main class="home-page">
+		<FakeTitle place="title" />
+		<Slider />
+		<div class="social-media-box">
+			<SocialLinks />
+		</div>
+	</main>
+</Layout>
+
+<style lang="sass">
+	.home-page p, .fake-title
+		color: #fff
+	.home-page
+		width: 100%
+		background-image: url('/img/home-background-static.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+		height: 100vh
+		min-height: 700px
+		display: flex
+		padding-top: 180px
+		align-items: center
+		p
+			margin: 0
+	.social-media-box
+		position: absolute
+		bottom: 56px
+		left: 67px
+		z-index: 100
+	@media all and (max-width: 400px)
+		.social-media-box
+			bottom: 20px
+			left: 20px
+</style>

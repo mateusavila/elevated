@@ -1,0 +1,256 @@
+---
+
+---
+<div class="what-we-do-page">
+      <div class="container">
+        <h1>
+          <span class="line line-1">
+            <span class="char end char-1">C</span>
+            <span class="char end char-2">O</span>
+            <span class="char end char-3">N</span>
+            <span class="char end char-4">N</span>
+            <span class="char end char-5">E</span>
+            <span class="char end char-6">C</span>
+            <span class="char end char-7">T</span>
+          </span>
+          <div class="line line-2">
+            <span class="char end char-8">I</span>
+            <span class="char end char-9">N</span>
+            <span class="char end char-10">S</span>
+            <span class="char end char-11">P</span>
+            <span class="char end char-12">I</span>
+            <span class="char end char-13">R</span>
+            <span class="char end char-14">E</span>
+            <span class="char end char-15">,</span>
+            <span class="char char-16 space"> </span>
+            <span class="char char-17 start">E</span>
+            <span class="char char-18 start">L</span>
+            <span class="char char-19 start">E</span>
+            <span class="char char-20 start">V</span>
+            <span class="char char-21 start">A</span>
+            <span class="char char-22 start">T</span>
+            <span class="char char-23 start">E</span>
+          </div>
+        </h1>
+      </div>
+    </div>
+
+<style lang="sass">
+  @keyframes titleAnimation
+    0%
+      transform: translateY(80vh)
+      font-size: 400px
+      letter-spacing: 0.1em
+    80%
+      letter-spacing: 0.1em
+      transform: translateY(0)
+      font-size: 400px
+    90%
+      letter-spacing: 0
+      transform: translateY(0)
+      font-size: 200px
+    100%
+      letter-spacing: 0
+      transform: translateY(0)
+      font-size: 200px
+      margin: 0
+  @keyframes titleAnimationTablet
+    0%
+      transform: translateY(80vh)
+      font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 38.4615)), 400px)
+      letter-spacing: 0.1em
+    80%
+      letter-spacing: 0.1em
+      transform: translateY(0)
+      font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 38.4615)), 400px)
+    90%
+      letter-spacing: 0
+      transform: translateY(0)
+      font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 12.8205)), 200px)
+    100%
+      letter-spacing: 0
+      transform: translateY(0)
+      font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 12.8205)), 200px)
+      margin: 0
+  @keyframes titleAnimationMobile
+    0%
+      transform: translateY(80vh)
+      font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 12.8205)), 200px)
+      letter-spacing: 0.1em
+    80%
+      letter-spacing: 0.1em
+      transform: translateY(0)
+      font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 12.8205)), 200px)
+    90%
+      letter-spacing: 0
+      transform: translateY(0)
+      font-size: clamp(60px, calc(3.75rem + ((1vw - 3.2px) * 36.8096)), 163.067px)
+    100%
+      letter-spacing: 0
+      transform: translateY(0)
+      font-size: clamp(60px, calc(3.75rem + ((1vw - 3.2px) * 36.8096)), 163.067px)
+      margin: 0
+  @keyframes heightAuto
+    0%
+      height: 0
+    100%
+      height: auto
+  @keyframes showEveryLetter
+    0%
+      max-width: 0
+      max-height: 0
+    100%
+      max-width: 60px
+      max-height: 240px
+      visibility: visible
+      opacity: 1
+  @keyframes showEveryLetterTablet
+    0%
+      max-width: 0
+      max-height: 0
+    100%
+      max-width: 60px
+      max-height: 240px
+      visibility: visible
+      opacity: 1
+  @keyframes showEveryLetterMobile
+    0%
+      max-width: 0
+      max-height: 0
+    100%
+      max-width: 60px
+      max-height: 240px
+      visibility: visible
+      opacity: 1
+  @keyframes showSpace
+    0%
+      width: 0
+    100%
+      width: 30px
+  .what-we-do-page
+    background: #000
+    overflow: hidden
+  .what-we-do-page
+    background-image: url('/img/bg-elevated-min.jpg')
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: cover
+    min-height: 800px
+    height: calc(100vh - 134px)
+    .container
+      width: calc(100% - 60px)
+      max-width: 1400px
+      margin: 134px auto 0
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+    h1
+      font-family: var(--flexible)
+      font-size: 200px
+      line-height: 120%
+      text-transform: uppercase
+      color: #fff
+      margin: 0
+      font-weight: normal
+      display: flex
+      flex-wrap: wrap
+      .line
+        width: 100%
+        display: flex
+        &.line-1
+          height: 0
+          animation: heightAuto 0.2s cubic-bezier(.68,.54,.52,.88) 1 forwards 3s
+      .char
+        &.end
+          max-width: 0
+          max-height: 0
+          opacity: 0
+          visibility: hidden
+          animation: showEveryLetter 0.3s cubic-bezier(.68,.54,.52,.88) 1 forwards
+          &.char-1
+            animation-delay: 3s
+          &.char-2
+            animation-delay: 3.05s
+          &.char-3
+            animation-delay: 3.1s
+          &.char-4
+            animation-delay: 3.15s
+          &.char-5
+            animation-delay: 3.2s
+          &.char-6
+            animation-delay: 3.25s
+          &.char-7
+            animation-delay: 3.3s
+          &.char-8
+            animation-delay: 3.35s
+          &.char-9
+            animation-delay: 3.4s
+          &.char-10
+            animation-delay: 3.45s
+          &.char-11
+            animation-delay: 3.5s
+          &.char-12
+            animation-delay: 3.55s
+          &.char-13
+            animation-delay: 3.6s
+          &.char-14
+            animation-delay: 3.65s
+          &.char-15
+            animation-delay: 3.7s
+        &.start
+          visibility: visible
+          transform: translateY(80vh)
+          font-size: 400px
+          letter-spacing: 0.25em
+          animation: titleAnimation 3s cubic-bezier(.68,.54,.52,.88) 1 forwards
+          &.char-17
+            animation-delay: 0
+          &.char-18
+            animation-delay: 0.05s
+          &.char-19
+            animation-delay: 0.1s
+          &.char-20
+            animation-delay: 0.15s
+          &.char-21
+            animation-delay: 0.2s
+          &.char-22
+            animation-delay: 0.25s
+          &.char-23
+            animation-delay: 0.3s
+        &.space
+          width: 0
+          animation: showSpace 0.4s cubic-bezier(.68,.54,.52,.88) 1 forwards 2s
+  @media all and (max-width: 1100px)
+    .what-we-do-page
+      h1
+        font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 12.8205)), 200px)
+        .char.end
+          animation: showEveryLetterTablet 0.3s cubic-bezier(.68,.54,.52,.88) 1 forwards
+        .char.start
+          font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 38.4615)), 400px)
+          animation: titleAnimationTablet 3s cubic-bezier(.68,.54,.52,.88) 1 forwards
+      .container
+        margin-top: 80px
+  @media all and (max-width: 600px)
+    .what-we-do-page
+      height: 100vh
+      min-height: 600px
+      h1
+        margin-top: -80px
+        font-size: clamp(60px, calc(3.75rem + ((1vw - 3.2px) * 36.8096)), 163.067px)
+        .char.space
+          width: 20px
+          max-width: 20px
+        .char.end
+          animation: showEveryLetterMobile 0.3s cubic-bezier(.68,.54,.52,.88) 1 forwards
+        .char.start
+          font-size: clamp(60px, calc(3.75rem + ((1vw - 3.2px) * 36.8096)), 163.067px)
+          animation: titleAnimationMobile 3s cubic-bezier(.68,.54,.52,.88) 1 forwards
+  @media all and (max-width: 400px)
+    .what-we-do-page
+      h1
+        .char.space
+          width: 15px
+          max-width: 15px
+</style>

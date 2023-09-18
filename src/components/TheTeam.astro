@@ -1,0 +1,106 @@
+---
+import { Laura, Seth, Victor } from './images'
+---
+
+<div class="the-team">
+  <div class="the-team-item">
+    <div class="the-team-item-text">
+      <h2>Laura</h2>
+      <p>The one who is always there to help.</p>
+    </div>
+    <img 
+      src={Laura}
+      alt="Laura"
+      loading="lazy"
+      width="538"
+      height="862"
+    >
+  </div>
+  <div class="the-team-item">
+    <div class="the-team-item-text">
+      <h2>Victor</h2>
+      <p>The one who brings people together.</p>
+    </div>
+    <img 
+      src={Victor}
+      alt="Victor"
+      loading="lazy"
+      width="538"
+      height="862"
+    >
+  </div>
+  <div class="the-team-item">
+    <div class="the-team-item-text">
+      <h2>Seth</h2>
+      <p>The one who started it all.</p>
+    </div>
+    <img 
+      src={Seth}
+      alt="Seth"
+      loading="lazy"
+      width="538"
+      height="862"
+    >
+  </div>
+</div>
+
+<style lang="sass">
+  .the-team
+    position: relative
+    grid-gap: 22px
+  .the-team-item-text h2, .the-team-item-text p, .the-team-item
+    margin: 0
+  .the-team-item img, .the-team
+    width: 100%
+  .the-team, .the-team-item
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  .the-team-item-text
+    width: 100%
+    margin: 0 auto
+    h2, p
+      font-size: 24px
+      line-height: 30px
+    h2
+      text-transform: uppercase
+      font-weight: bold
+    p
+      font-weight: 300
+  .the-team-item
+    color: #fff
+    grid-gap: 30px
+    flex-wrap: wrap
+    font-size: 0
+    font-family: var(--inter)
+    &:nth-child(2)
+      margin-top: 120px
+    &:hover
+      img
+        transform: translateY(-160px)
+        transition: all .6s cubic-bezier(.54,.3,.22,.97)
+    img
+      height: 430px
+      width: 268px
+      object-fit: cover
+      display: block
+      position: relative
+      z-index: 2
+      transition: all .6s cubic-bezier(.54,.3,.22,.97)
+  @media all and (max-width: 900px)
+    .the-team
+      width: 271px
+      flex-wrap: wrap
+      margin: 124px auto 30px
+    .the-team-item-text
+      width: 100%
+      margin: 0
+    .the-team-item
+      height: auto
+      grid-gap: 20px
+      margin-bottom: 30px
+      &:hover img
+        transform: none
+      &:nth-child(2)
+        margin-top: 0
+</style>

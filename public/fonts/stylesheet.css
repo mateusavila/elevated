@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Flexible H1000 W200';
+    src: url('../fonts/Flexible-H1000W200.woff2') format('woff2'),
+        url('../fonts/Flexible-H1000W200.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Flexible H700 W200';
+  src: url('../fonts/FONTSPRINGDEMO-FlexibleH700W200Regular.woff2') format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-FlexibleH700W200Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('../fonts/Gelion-Medium.woff2') format('woff2'),
+        url('../fonts/Gelion-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('../fonts/Gelion-Regular.woff2') format('woff2'),
+        url('../fonts/Gelion-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('../fonts/Gelion-Bold.woff2') format('woff2'),
+        url('../fonts/Gelion-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('../fonts/Gelion-Thin.woff2') format('woff2'),
+        url('../fonts/Gelion-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

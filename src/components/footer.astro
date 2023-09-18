@@ -1,0 +1,157 @@
+---
+import SocialLinks from "./SocialLinks.astro"
+import { Logo, ElevatedLogoFooter } from './images'
+---
+
+<footer>
+  <div class="container">
+    <div class="logo-address">
+      <div class="logo-address-column column-1">
+        <img 
+          loading="lazy"
+          src={ElevatedLogoFooter}
+          alt=""
+          width="202"
+          height="202"
+        >
+      </div>
+      <div class="logo-address-column column-2">
+        <h3>Email</h3>
+        <p><a href="mailto:hello@weareelevated.com">hello@weareelevated.com</a></p>
+      </div>
+      <div class="logo-address-column column-3">
+        <h3>Our Home</h3>
+        <p>Brooklyn, NY</p>
+      </div>
+    </div>
+    <div class="logo-social">
+      <img 
+        src={Logo} 
+        alt="Elevated"
+        width="222"
+        height="42"
+        loading="lazy"
+        >
+      <SocialLinks />
+    </div>
+    <div class="credits">
+      <p>WeAreElevated © copyright - 2022</p>
+    </div>
+  </div>
+</footer>
+
+<style lang="sass">
+  footer .credits p, .logo-address p
+    font-size: 20px
+    margin: 0
+    line-height: 24px
+  footer .credits p, .logo-address p, .logo-address h3, .logo-address a
+    font-family: var(--inter)
+    color: #fff
+  footer
+    background: #000
+    .container
+      width: calc(100% - 60px)
+      max-width: 1350px
+      border-top: 1px solid #fff
+      margin: 120px auto
+      padding: 90px 0 0
+    .credits
+      width: 100%
+      text-align: center
+      p
+        font-weight: 400
+  .logo-address, .logo-social, footer .container
+    display: flex
+    flex-wrap: wrap
+  .logo-address, footer .container
+    justify-content: space-between
+  .logo-address
+    width: 840px
+    grid-gap: 124px
+    h3
+      margin: 0 0 15px
+      font-size: 25px
+      line-height: 30px
+      font-weight: 600
+    a
+      text-decoration: none
+  .logo-social
+    width: 222px
+    grid-gap: 0 60px
+    justify-content: flex-end
+  @media all and (max-width: 1200px)
+    .logo-address
+      width: 100%
+      max-width: 680px
+      grid-gap: 0
+  @media all and (max-width: 1024px)
+    .logo-address
+      flex-wrap: wrap
+      width: 100%
+      max-width: 100%
+    .logo-social
+      width: 100%
+      margin: 30px auto
+      justify-content: center
+      img
+        display: none
+    .logo-address-column
+      &.column-1
+        order: 2
+        width: 202px
+      &.column-2
+        order: 1
+        width: calc(100% - 202px)
+      &.column-3
+        margin-top: -100px
+        order: 3
+        width: calc(100% - 202px)
+  @media all and (max-width: 600px)
+    footer
+      .container
+        margin: 80px auto 20px
+      .credits
+        p
+          font-size: 14px
+    .logo-address-column
+      img
+        max-width: 100px
+        height: auto
+        display: block
+      h3
+        font-size: 20px
+        margin-bottom: 5px
+      p
+        font-size: 16px
+      &.column-1
+        width: 100px
+      &.column-2
+        width: calc(100% - 100px)
+      &.column-3
+        margin-top: -20px
+        width: calc(100% - 100px)
+  @media all and (max-width: 400px)
+    .logo-address-column
+      img
+        max-width: 100px
+        height: auto
+        display: block
+        margin: 0 auto
+      h3
+        font-size: 20px
+        margin-bottom: 5px
+      p
+        font-size: 16px
+      &.column-1
+        width: 100%
+        margin-bottom: 20px
+        order: 1
+      &.column-2
+        width: 100%
+        order: 2
+      &.column-3
+        margin-top: 20px
+        width: 100%
+        order: 3
+</style>

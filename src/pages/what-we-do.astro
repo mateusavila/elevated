@@ -1,0 +1,24 @@
+---
+import Services from '../components/Services.vue'
+import Footer from '../components/footer.astro';
+import Layout from '../layouts/Layout.astro';
+import ServiceVideo from '../components/ServiceVideo.vue';
+import WorkWithUs from '../components/WorkWithUs.astro';
+import WhatWeDoTitle from '../components/WhatWeDoTitle.astro';
+---
+
+<Layout title="Elevated">
+	<main class="what-we-do">
+		<WhatWeDoTitle />
+		<Services client:load />
+		<ServiceVideo client:visible />
+		<WorkWithUs header={false} small={true} type="what-we-do" />
+	</main>
+	<Footer />
+</Layout>
+
+<style lang="sass">
+	.what-we-do
+		background: #000
+</style>
+

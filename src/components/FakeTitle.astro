@@ -1,0 +1,49 @@
+---
+export interface Props {
+	place: 'title' | 'slider';
+}
+const {place} = Astro.props
+const classes = ['fake-title', place]
+---
+
+<h1 class:list={classes}>ELEVATED<br>BY DESIGN</h1>
+
+<style lang="sass">
+	@keyframes titleAnimation
+		0%
+			transform: translateY(10vh)
+			opacity: 0
+		100%
+			transform: translateY(0)
+			opacity: 1
+	.fake-title
+		font-family: var(--flexible)
+		font-size: clamp(180px, calc(11.25rem + ((1vw - 17.28px) * 11.8838)), 450px)
+		line-height: 115%
+		color: #fff
+		margin-top: -90px
+		letter-spacing: 0.02em
+		margin-left: 232px
+		font-weight: normal
+		animation: titleAnimation .6s cubic-bezier(.68,.54,.52,.88) 1 forwards
+	@media all and (max-width: 1728px)
+		.fake-title
+			font-size: clamp(140px, calc(8.75rem + ((1vw - 12px) * 7.5758)), 180px)
+	@media all and (max-width: 1200px)
+		.fake-title
+			font-size: clamp(120px, calc(7.5rem + ((1vw - 10.24px) * 11.3636)), 140px)
+			margin-left: 60px
+	@media all and (max-width: 1024px)
+		.fake-title
+			display: block
+			margin-bottom: 0
+			font-size: clamp(180px, calc(11.25rem + ((1vw - 7px) * 21.6049)), 250px)
+			&.title
+				display: none
+	@media all and (max-width: 700px)
+		.fake-title
+			font-size: clamp(100px, calc(6.25rem + ((1vw - 3.2px) * 21.0526)), 180px)
+	@media all and (max-width: 400px)
+		.fake-title
+			margin-left: 20px
+</style>

@@ -1,0 +1,39 @@
+---
+import { Instagram, Linkedin } from './images'
+---
+
+<nav class="social-media">
+	<a href="https://instagram.com/weareelevated.co" target="_blank" rel="noopener noreferrer">
+		<img
+			src={Instagram}
+			alt="Instagram"
+			width="30"
+			height="30"
+			loading="lazy">
+	</a>
+	<a href="https://www.linkedin.com/company/weareelevated/" target="_blank" rel="noopener noreferrer">
+		<img
+			src={Linkedin}
+			alt="Linkedin"
+			width="30"
+			height="30"
+			loading="lazy">
+	</a>
+</nav>
+
+<style lang="sass">
+	.social-media
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 82px
+		height: 30px
+		a, a:hover
+			transition: all .2s ease-in-out
+		&:hover a
+			opacity: 0.7
+		&:hover a:hover
+			opacity: 1
+		a:hover
+			transform: translateY(-5px)
+</style>

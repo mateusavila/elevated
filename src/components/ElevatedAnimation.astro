@@ -1,0 +1,69 @@
+---
+import { Elevated } from './images'
+---
+
+<div class="elevated-animation">
+  <div class="elevated-animation-list">
+    <img 
+      src={Elevated} 
+      alt=""
+      width="1282"
+      height="230"
+      loading="lazy"
+    >
+    <img 
+      src={Elevated} 
+      alt=""
+      width="1282"
+      height="230"
+      loading="lazy"
+    >
+    <img 
+      src={Elevated} 
+      alt=""
+      width="1282"
+      height="230"
+      loading="lazy"
+    >
+  </div>
+</div>
+
+<style lang="sass">
+  @keyframes animationElevatedLogo
+    0%
+      transform: translateX(0)
+    100%
+      transform: translateX(-1296px)
+  @keyframes animationElevatedLogoMobile
+    0%
+      transform: translateX(0)
+    100%
+      transform: translateX(-574px)
+  .elevated-animation, .elevated-animation img
+    height: 230px
+  .elevated-animation
+    overflow: hidden
+    white-space: nowrap
+    width: 100%
+    margin: 200px 0 90px
+    &-list
+      display: flex
+      flex-flow: row nowrap
+      grid-gap: 14px
+      animation: animationElevatedLogo 10s linear infinite
+      width: calc((1282px + 14px) * 3)
+    img
+      object-fit: cover
+      width: auto
+  @media all and (max-width: 900px)
+    .elevated-animation
+      height: auto
+      padding-bottom: 10px
+      &-list
+        width: calc((560px + 14px) * 3)
+        animation: animationElevatedLogoMobile 10s linear infinite
+      img
+        max-width: 560px
+        height: auto
+        display: block
+</style>

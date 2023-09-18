@@ -1,0 +1,71 @@
+---
+import { ContactVideo } from './images'
+---
+<div class="service-video">
+	<video src={ContactVideo} autoplay muted loop></video>
+	<div class="container">
+		<h2>Hello</h2>
+	</div>
+</div>
+
+<style lang="sass">
+	.service-video, .service-video .container, .service-video h2
+		position: relative
+	.service-video
+		width: 100%
+		height: 394px
+		margin: 200px 0
+		video, .container
+			height: 100%
+		video, h2:after
+			position: absolute
+		video
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 1
+			object-fit: fill
+		.container
+			margin: 0 auto
+			max-width: 1260px
+			width: calc(100% - 80px)
+			align-items: center
+			z-index: 2
+			display: flex
+			justify-content: flex-end
+		h2
+			font-family: var(--inter)
+			font-size: 100px
+			line-height: 1
+			font-weight: 700
+			margin: 0
+			color: #fff
+			width: 572px
+			&:after
+				content: ''
+				right: 0
+				width: 170px
+				height: 1px
+				top: 50%
+				margin-top: -0.5px
+				background: #fff
+	@media all and (max-width: 1024px)
+		.service-video
+			h2
+				font-size: clamp(60px, calc(3.75rem + ((1vw - 3.2px) * 5.6818)), 100px)
+	@media all and (max-width: 500px)
+		.service-video
+			height: 0
+			margin: 80px 0
+			padding-bottom: 56.25%
+			position: relative
+			h2::after
+				width: 120px
+			.container
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+				padding-left: 20px
+				width: calc(100% - 20px)
+</style>

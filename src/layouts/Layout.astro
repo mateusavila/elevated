@@ -1,0 +1,47 @@
+---
+import Header from '../components/Header.vue'
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+const { pathname: url } = Astro.url
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet"> 
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header client:load url={url} />
+    <slot />
+  </body>
+</html>
+<style lang="sass" is:global>
+  :root
+    --bg-color: #000
+    --inter: 'Inter', sans-serif
+    --gelion: 'Gelion', sans-serif
+    --flexible: 'Flexible H1000 W200', sans-serif
+    --flexible700: 'Flexible H700 W200', sans-serif
+  *, *:before, *:after
+    box-sizing: border-box
+  html, body
+    margin: 0
+    padding: 0
+  html
+    font-family: system-ui, sans-serif
+    line-height: 1.15
+    -webkit-text-size-adjust: 100%
+    background: var(--bg-color)
+  p
+    color: #fff
+</style>

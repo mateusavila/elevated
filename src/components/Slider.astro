@@ -1,0 +1,149 @@
+---
+import FakeTitle from './FakeTitle.astro';
+import { SliderDownSlide, Portfolio1, Portfolio2, Portfolio3, Portfolio4, Portfolio5, Portfolio6, Portfolio7, Portfolio8 } from './images'
+---
+<div class="slider-block">
+	<div class="slider">
+		<div class="slider-item mobile slider-item-text">
+			<FakeTitle place="slider" />
+		</div>
+		<div class="slider-item slider-item-text slider-item-first">
+			<p>We embrace the creative<br> freedom to <strong> create<br> solutions that connect,<br> communicate and inspire.</strong></p>
+		</div>
+		<div class="slider-item slider-item-text">
+			<p class="fw400">We Live In <span class="fading-text">the Details.</span></p>
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio1} alt="Ineffable" width="2592" height="2592" loading="lazy">
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio2} alt="Slide of Americana" width="2592" height="2598" loading="lazy">
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio3} alt="Daha" width="2592" height="2592" loading="lazy">
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio4} alt="Tappings Solution" width="2592" height="2607" loading="lazy">
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio5} alt="13 Lines" width="2592" height="2589" loading="lazy">
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio6} alt="Joyspring" width="864" height="864" loading="lazy">
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio7} alt="Ross Commerce" width="863" height="863" loading="lazy">
+		</div>
+		<div class="slider-item mobile-cover">
+			<img src={Portfolio8} alt="Jia" width="862" height="862" loading="lazy">
+		</div>
+	</div>
+	<img 
+		src={SliderDownSlide} 
+		alt=""
+		loading="lazy"
+		width="24"
+		height="77"
+		class="slider-arrow">
+</div>
+
+<style lang="sass">
+	@keyframes firstSliderAnimation
+		0%
+			opacity: 0
+		100%
+			opacity: 1
+	.slider-block, .slider
+		height: 100vh
+	.slider-block
+		width: 50vw
+		background: rgba(0,0,0,0.5)
+		position: fixed
+		right: 0
+		top: 0
+		z-index: 1
+	.slider, .slider-item
+		display: flex
+	.slider
+		box-sizing: border-box
+		overflow: auto
+		flex-flow: row nowrap
+		flex-wrap: wrap
+		scroll-snap-type: y mandatory
+	.slider-item, .slider-item img
+		height: 100%
+		width: 100%
+	.slider-item
+		color: #fff
+		scroll-snap-align: center
+		position: relative
+		font-family: var(--gelion)
+		align-items: center
+		z-index: 3
+		&.slider-item-text
+			z-index: 1
+		&.mobile
+			display: none
+		p
+			margin: 0
+			text-align: right
+			font-weight: 300
+			font-size: clamp(40px, calc(2.5rem + ((1vw - 17.28px) * 1.3204)), 70px)
+			padding-left: 50px
+			line-height: 100%
+			&.fw400
+				font-weight: 400
+		img
+			object-fit: cover
+		.fading-text
+			color: rgba(255, 255, 255, 0.48)
+	.slider-arrow
+		position: absolute
+		z-index: 2
+		bottom: 84px
+		left: 245px
+	@media all and (min-width: 1024px)
+		.slider-item
+			&.slider-item-first
+				opacity: 0
+				animation: firstSliderAnimation .6s cubic-bezier(.68,.54,.52,.88) 1 forwards .3s
+	@media all and (max-width: 1728px)
+		.slider-item
+			p
+				font-size: clamp(32px, calc(2rem + ((1vw - 10.24px) * 1.1364)), 40px)
+	@media all and (max-width: 1024px)
+		.slider-block
+			min-width: 100%
+			max-width: 100%
+		.slider-item.mobile
+			display: flex
+		.slider-arrow
+			left: 50%
+			transform: translateX(-50%)
+		.slider-item
+			p
+				font-size: 40px
+	@media all and (max-width: 700px)
+		.slider-item
+			&.mobile-cover
+				img
+					object-fit: cover
+			img
+				object-fit: contain
+				object-position: center center
+			p
+				font-size: 30px
+	@media all and (max-width: 400px)
+		.slider-arrow
+			max-height: 50px
+			right: 20px
+			bottom: 40px
+			left: auto
+			transform: none
+		.slider-item
+			p
+				width: 100%
+				padding: 0 20px
+				font-size: 26px
+				line-height: 30px
+</style>
